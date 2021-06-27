@@ -10,8 +10,8 @@ namespace Project.Core.Common.Interfaces
 {
     public interface IRepository<TEntity> where TEntity : class
     {
-        IQueryable<TEntity> GetAsync(bool ignoreDeleteFilter = false);
-        IQueryable<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, bool ignoreDeleteFilter = false);
+        IQueryable<TEntity> Get(bool ignoreDeleteFilter = false);
+        IQueryable<TEntity> Get(Expression<Func<TEntity, bool>> predicate, bool ignoreDeleteFilter = false);
         IQueryable<TEntity> GetInclude(Expression<Func<TEntity, bool>> predicate, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include, bool ignoreDeleteFilter = false);
         void Update(TEntity entity);
         void UpdateRange(List<TEntity> entities);

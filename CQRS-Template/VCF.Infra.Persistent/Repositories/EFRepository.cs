@@ -69,7 +69,7 @@ namespace Project.Infra.Persistent.Repositories
 			return await query.FirstOrDefaultAsync(predicate);
 		}
 
-		public IQueryable<TEntity> GetAsync(bool ignoreDeleteFilter = false)
+		public IQueryable<TEntity> Get(bool ignoreDeleteFilter = false)
 		{
 			IQueryable<TEntity> query = _dbSet;
 
@@ -81,7 +81,7 @@ namespace Project.Infra.Persistent.Repositories
 			return query;
 		}
 
-		public IQueryable<TEntity> GetAsync(
+		public IQueryable<TEntity> Get(
 			Expression<Func<TEntity, bool>> predicate, 
 			bool ignoreDeleteFilter = false)
 		{

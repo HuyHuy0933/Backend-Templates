@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Helpers\" />
+    <Folder Include="Common\Validations\" />
+    <Folder Include="CQRS\Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.2.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.2.2" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Libraries\Infrastructure.ListUtil\Infrastructure.ListUtil.csproj" />
+    <ProjectReference Include="..\VCF.Core\Project.Core.csproj" />
+  </ItemGroup>
+
+</Project>
